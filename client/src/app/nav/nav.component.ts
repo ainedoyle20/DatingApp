@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { AccountService } from '../_services/account.service';
 
 @Component({
@@ -12,14 +11,13 @@ export class NavComponent implements OnInit {
   isDropdownOpen = false;
   model: any = {};
 
-  constructor(public accountService: AccountService, private router: Router, private toaster: ToastrService) { }
+  constructor(public accountService: AccountService, private router: Router) { }
 
   ngOnInit(): void { }
 
   onLogin() {
     this.accountService.login(this.model).subscribe({
-      next: () => this.router.navigateByUrl('/members'),
-      error: error => this.toaster.error(error.error)
+      next: () => this.router.navigateByUrl('/members')
     })
   }
 
