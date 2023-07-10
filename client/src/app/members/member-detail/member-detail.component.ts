@@ -58,7 +58,5 @@ export class MemberDetailComponent implements OnInit {
 
   changeTab(tabName: string) {
     this.activeTab = tabName;
-    console.log(this.activeTab);
-    console.log(this.member?.introduction)
   }
 }
