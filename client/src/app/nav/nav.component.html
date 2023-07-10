@@ -24,7 +24,7 @@
       </a>
 
       <ul class="dropdown-menu" [class.show]="isDropdownOpen">
-        <li><a class="dropdown-item" style="cursor: pointer;">Edit Profile</a></li>
+        <li><a class="dropdown-item" routerLink="/member/edit" (click)="toggleDropdown()">Edit Profile</a></li>
         <li (click)="onLogout()"><a class="dropdown-item" style="cursor: pointer;">Logout</a></li>
       </ul>
     </div>
