@@ -31,9 +31,8 @@ namespace API.Entities
 
         public List<Photo> Photos { get; set; } = new(); // new() shorthand for new List<Photo>()
 
-        // public int GetAge()
-        // {
-        //     return DateOfBirth.CalculateAge(); //  CalculateAge() is our extension method
-        // }
+        public List<UserLike> LikedByUsers { get; set; }
+
+        public List<UserLike> LikedUsers { get; set; }
     }
 }
