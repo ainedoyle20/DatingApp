@@ -19,6 +19,12 @@ export class MemberDetailComponent implements OnInit {
   ngOnInit(): void {
     this.loadMember();
 
+    this.route.queryParams.subscribe({
+      next: params => {
+        params['tab'] && this.changeTab(params['tab'])
+      }
+    })
+
     this.galleryOptions = [
       {
         width: '500px',

@@ -39,7 +39,7 @@
       <div class="card-footer">
         <div class="btn-group d-flex">
           <button class="btn btn-primary">Like</button>
-          <button class="btn btn-success">Messages</button>
+          <button class="btn btn-success" (click)="changeTab('tab4')">Messages</button>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
         <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
       </div>
       <div *ngIf="activeTab === 'tab4'">
-        <p>Messages will go here</p>
+        <app-member-messages [username]="member.userName"></app-member-messages>
       </div>
     </div>
   </div>
